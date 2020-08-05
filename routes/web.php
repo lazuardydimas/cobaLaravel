@@ -26,7 +26,20 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-    Route::get('/','HomeController@home');
+    Route::get('/home','HomeController@home');
 
     Route::get('/register','AuthController@register');
     Route::post('/welcome','AuthController@welcome');
+
+    Route::get('/master',function() {
+        return view('adminlte/master');
+    });
+
+    
+    Route::get('/',function() {
+        return view('adminlte/test');
+    });
+
+    Route::get('/data-tables',function(){
+        return view('adminlte/datatables');
+    });
