@@ -8,43 +8,45 @@
     <h1>Buat Account Baru !</h1>
 
     <h3>Sign Up Form</h3>
+<form action="/welcome" method="POST">
+@csrf
+    First Name:
+        <input type="text" name="firstname">
+        <br><br>
 
-    <p>First Name:</p>
-    <form method="post">
-        <input type="text" name="nama">
-    </form>
 
-    <p>Last Name:</p>
-    <form method="post">
-        <input type="text">
-    </form>
+    Last Name:
+        <input type="text" name="lastname">
+        <br><br>
 
-    <p>Gender:</p>
-    <form>
+    Gender
+    <br>
         <input type="radio" name="gender" id=""> Male <br>
         <input type="radio" name="gender" id=""> Female <br>
         <input type="radio" name="gender" id=""> Other <br>
-    </form>
+        <br>
 
-    <p>Nationality:</p>
+    Nationality:
+    <br>
     <select name="nationality">
         <option value="">-- select one --</option>
         <option value="Indonesian">Indonesian</option>
         <option value="Malaysian">Malaysian</option>
     </select>
+    <br><br>
 
-    <p>Language Spoken:</p>
-    <form>
+    Language Spoken:
+    <br>
         <input type="checkbox" name="bahasa" id="">Bahasa Indonesia <br>
         <input type="checkbox" name="bahasa" id="">English <br>
         <input type="checkbox" name="bahasa" id="">Other <br>
-    </form>
+        <br>
 
-    <p>Bio:</p>
+    Bio:
+    <br>
         <textarea name="" cols="40" rows="8"></textarea> <br>   
         
-    <form action="/welcome">
         <button name="submit" type="submit">Sign Up</button>
-    </form>
+</form>
 </body>
 </html>
