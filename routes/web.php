@@ -18,14 +18,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-// Route::get('/register', function () {
-//     return view('register');
-// });
-
-// Route::get('/welcome', function () {
-//     return view('welcome');
-// });
-
     Route::get('/home','HomeController@home');
 
     Route::get('/register','AuthController@register');
@@ -43,3 +35,17 @@ use Illuminate\Support\Facades\Route;
     Route::get('/data-tables',function(){
         return view('adminlte/datatables');
     });
+
+    Route::get('/pertanyaan/create','PertanyaanController@create');
+
+    Route::get('/pertanyaan/{pertanyaan_id}','PertanyaanController@show');
+
+    Route::get('/pertanyaan','PertanyaanController@index');
+
+    Route::get('/pertanyaan/{pertanyaan_id}/edit','PertanyaanController@edit');
+
+    Route::put('/pertanyaan/{pertanyaan_id}','PertanyaanController@update');
+
+    Route::post('/pertanyaan','PertanyaanController@store');
+    
+    Route::delete('/pertanyaan/{pertanyaan_id}','PertanyaanController@destroy');
