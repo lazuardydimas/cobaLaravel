@@ -36,16 +36,18 @@ use Illuminate\Support\Facades\Route;
         return view('adminlte/datatables');
     });
 
-    Route::get('/pertanyaan/create','PertanyaanController@create');
+    // Route::get('/pertanyaan/create','PertanyaanController@create');
 
-    Route::get('/pertanyaan/{pertanyaan_id}','PertanyaanController@show');
+    // Route::get('/pertanyaan/{pertanyaan_id}','PertanyaanController@show');
 
-    Route::get('/pertanyaan','PertanyaanController@index');
+    // Route::get('/pertanyaan','PertanyaanController@index');
 
-    Route::get('/pertanyaan/{pertanyaan_id}/edit','PertanyaanController@edit');
+    // Route::get('/pertanyaan/{pertanyaan_id}/edit','PertanyaanController@edit');
 
-    Route::put('/pertanyaan/{pertanyaan_id}','PertanyaanController@update');
+    // Route::put('/pertanyaan/{pertanyaan_id}','PertanyaanController@update');
 
-    Route::post('/pertanyaan','PertanyaanController@store');
+    // Route::post('/pertanyaan','PertanyaanController@store');
     
-    Route::delete('/pertanyaan/{pertanyaan_id}','PertanyaanController@destroy');
+    // Route::delete('/pertanyaan/{pertanyaan_id}','PertanyaanController@destroy');
+
+    Route::resource('mempertanyakan','MempertanyakanController');

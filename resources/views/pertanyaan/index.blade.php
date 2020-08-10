@@ -24,7 +24,7 @@
                     {{session('success')}}
                     </div>
                     @endif
-                    <a href="/pertanyaan/create" class="btn btn-info ml-3 mt-2 mb-2" >Buat Baru</a>
+                    <a href="/mempertanyakan/create" class="btn btn-info ml-3 mt-2 mb-2" >Buat Baru</a>
                     <table class="table table-bordered">
                     <thead align="center">
                         <tr>
@@ -36,17 +36,17 @@
                         </tr>
                     </thead>
                     <tbody align="center">
-                        @forelse($isi as $key => $satuan)
+                        @forelse($tanya as $key => $tanya)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$satuan->profil_id}}</td>
-                                <td>{{$satuan->judul}}</td>
-                                <td>{{$satuan->isi}}</td>
+                                <td>{{$tanya->profil_id}}</td>
+                                <td>{{$tanya->judul}}</td>
+                                <td>{{$tanya->isi}}</td>
                                 <td>
-                                <a  class="btn btn-info btn-sm" href="/pertanyaan/{{$satuan->id}}">Show</a>
-                                <a  class="btn btn-sm btn-dark" href="/pertanyaan/{{$satuan->id}}/edit">Edit</a>
+                                <a  class="btn btn-info btn-sm" href="/mempertanyakan/{{$tanya->id}}">Show</a>
+                                <a  class="btn btn-sm btn-dark" href="/mempertanyakan/{{$tanya->id}}/edit">Edit</a>
                                 <div class="mt-1">
-                                <form action="/pertanyaan/{{$satuan->id}}" method="post">
+                                <form action="/mempertanyakan/{{$tanya->id}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <input type="submit" value="Delete" class="btn btn-danger btn-sm">

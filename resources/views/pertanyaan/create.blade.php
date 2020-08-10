@@ -8,7 +8,7 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-            <form  action="/pertanyaan" method="POST" role="form">
+            <form  action="/mempertanyakan" method="POST" role="form">
             @csrf
                 <div class="card-body">
 
